@@ -1,0 +1,92 @@
+# Class: User
+class User:
+    def __init__(self, firstName, secondName, gender, dateOfBirth, nationality, phoneNumber):
+        self._firstName = firstName
+        self._secondName = secondName
+        self._gender = gender
+        self._dateOfBirth = dateOfBirth
+        self._nationality = nationality
+        self._phoneNumber = phoneNumber
+    
+    # Print function
+    def print_details(self):
+        print("User Details:")
+        print("First Name: " + self._firstName)
+        print("Second Name: " + self._secondName)
+        print("Gender: " + self._gender)
+        print("Date of Birth: " + str(self._dateOfBirth))
+        print("Nationality: " + self._nationality)
+        print("Phone Number: " + self._phoneNumber)
+        print()
+
+# Class: BookRoom
+class BookRoom:
+    def __init__(self, roomNumber, roomLevel, roomType, roomSection, roomPrice):
+        self._roomNumber = roomNumber
+        self._roomLevel = roomLevel
+        self._roomType = roomType
+        self._roomSection = roomSection
+        self._roomPrice = roomPrice
+    
+    # Print function
+    def print_details(self):
+        print("Room Details:")
+        print("Room Number: " + self._roomNumber)
+        print("Room Level: " + self._roomLevel)
+        print("Room Type: " + self._roomType)
+        print("Room Section: " + self._roomSection)
+        print("Room Price: " + str(self._roomPrice))
+        print()
+
+# Class: PaymentProcess
+class PaymentProcess:
+    def __init__(self, cardHolderFirstName, cardHolderSecondName, cardNumber, loyaltyID, total):
+        self._cardHolderFirstName = cardHolderFirstName
+        self._cardHolderSecondName = cardHolderSecondName
+        self._cardNumber = cardNumber
+        self._loyaltyID = loyaltyID
+        self._total = total
+    
+    # Print function
+    def print_details(self):
+        print("Payment Process Details:")
+        print("Card Holder First Name: " + self._cardHolderFirstName)
+        print("Card Holder Second Name: " + self._cardHolderSecondName)
+        print("Card Number: " + self._cardNumber)
+        print("Loyalty ID: " + self._loyaltyID)
+        print("Total: " + str(self._total))
+        print()
+
+# Class: ViewBooking
+class ViewBooking:
+    def __init__(self, bookedRoom, bookingDate, checkIn, checkOut, bookingTicket):
+        self._bookedRoom = bookedRoom
+        self._bookingDate = bookingDate
+        self._checkIn = checkIn
+        self._checkOut = checkOut
+        self._bookingTicket = bookingTicket
+    
+    # Print function
+    def print_details(self):
+        print("Booking Details:")
+        print("Booked Room: " + self._bookedRoom)
+        print("Booking Date: " + str(self._bookingDate))
+        print("Check-In: " + self._checkIn)
+        print("Check-Out: " + self._checkOut)
+        print("Booking Ticket: " + self._bookingTicket)
+        print()
+
+
+# Example usage:
+user = User("John", "Doe", "Male", "1990-01-01", "USA", "123-456-7890")
+user.print_details()
+
+room = BookRoom("101", "Deluxe", "Suite", "Ocean View", 200.00)
+room.print_details()
+
+payment = PaymentProcess("John", "Doe", "1234-5678-9876", "L123456", 250.75)
+payment.print_details()
+
+booking = ViewBooking("101", "2024-10-01", "2:00 PM", "11:00 AM", "B123456")
+booking.print_details()
+
