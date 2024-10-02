@@ -76,17 +76,35 @@ class ViewBooking:
         print("Booking Ticket: " + self._bookingTicket)
         print()
 
+# Function to print all details for a person
+def print_full_details(user, room, payment, booking):
+    user.print_details()
+    room.print_details()
+    payment.print_details()
+    booking.print_details()
 
-# Example usage:
-user = User("John", "Doe", "Male", "1990-01-01", "USA", "123-456-7890")
-user.print_details()
+# Example usage to print all details for two persons:
 
-room = BookRoom("101", "Deluxe", "Suite", "Ocean View", 200.00)
-room.print_details()
+# Person 1
+user1 = User("John", "Doe", "Male", "1990-01-01", "USA", "123-456-7890")
+room1 = BookRoom("101", "Deluxe", "Suite", "Ocean View", 200.00)
+payment1 = PaymentProcess("John", "Doe", "1234-5678-9876", "L123456", 250.75)
+booking1 = ViewBooking("101", "2024-10-01", "2:00 PM", "11:00 AM", "B123456")
 
-payment = PaymentProcess("John", "Doe", "1234-5678-9876", "L123456", 250.75)
-payment.print_details()
+# Person 2
+user2 = User("Zayed", "Alkatheeri", "Male", "2004-11-24", "UAE", "054-308-7888")
+room2 = BookRoom("202", "Standard", "Single", "City View", 100.00)
+payment2 = PaymentProcess("Zayed", "Alkatheeri", "9876-5432-1234", "L654321", 100.50)
+booking2 = ViewBooking("202", "2024-12-01", "3:00 PM", "10:00 AM", "B654321")
+
+# Print details for Person 1
+print("Details for Person 1:")
+print_full_details(user1, room1, payment1, booking1)
+
+# Print details for Person 2
+print("Details for Person 2:")
+print_full_details(user2, room2, payment2, booking2)
+
 
 booking = ViewBooking("101", "2024-10-01", "2:00 PM", "11:00 AM", "B123456")
 booking.print_details()
-
